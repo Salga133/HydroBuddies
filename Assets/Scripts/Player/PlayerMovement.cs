@@ -49,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
                 targetPos.x += input.x;
                 targetPos.y += input.y;
 
-                Debug.Log(input);
                 // if (IsWalkable(targetPos))
                     StartCoroutine(Move(targetPos));
             }
