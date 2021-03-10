@@ -14,9 +14,9 @@ TagManager:
   - 
   - 
   - 
-  - Rock
-  - Grass
-  - Trees
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -50,11 +50,14 @@ TagManager:
   - name: Water
     uniqueID: 16516005
     locked: 0
-  - name: Rocks
+  - name: GroundStuff
     uniqueID: 1675992045
     locked: 0
-  - name: Grass
-    uniqueID: 754221435
+  - name: Bridge
+    uniqueID: 186950701
+    locked: 0
+  - name: Bushes
+    uniqueID: 2860535405
     locked: 0
   - name: Log
     uniqueID: 3719298519
@@ -64,4 +67,7 @@ TagManager:
     locked: 0
   - name: TreeLeaves
     uniqueID: 3723230501
+    locked: 0
+  - name: Campfire
+    uniqueID: 4092272915
     locked: 0
