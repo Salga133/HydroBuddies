@@ -6287,7 +6287,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1675992045
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -6572,7 +6572,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -575668777
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -7660,7 +7660,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -575668777
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -8746,7 +8746,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184231022}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.2, y: -1.51, z: 0}
+  m_LocalPosition: {x: -4, y: -0.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 718721457}
@@ -8809,7 +8809,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 198645737
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -4256427906160430202, guid: 3f7a99e634244904e8eae85639eaa1d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8953,7 +8953,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 754221435
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -9095,9 +9095,9 @@ GameObject:
   - component: {fileID: 1635679954}
   - component: {fileID: 1635679957}
   - component: {fileID: 1635679956}
-  - component: {fileID: 1635679959}
   - component: {fileID: 1635679958}
   - component: {fileID: 1635679955}
+  - component: {fileID: 1635679959}
   m_Layer: 11
   m_Name: Tree
   m_TagString: Untagged
@@ -9133,140 +9133,32 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
   - m_Collider: {fileID: 1635679959}
     m_ColliderPaths:
-    - - X: 9375000
-        Y: 20000000
-      - X: 9375000
-        Y: 21250000
-      - X: 7500000
-        Y: 25000000
-      - X: 1250000
-        Y: 26250000
-      - X: 0
-        Y: 26250000
-      - X: 0
-        Y: 26875000
-      - X: -3750000
-        Y: 28125000
-      - X: -8125000
-        Y: 28125000
-      - X: -10000000
-        Y: 26250000
-      - X: -11250000
-        Y: 26250000
-      - X: -16250000
-        Y: 25625000
-      - X: -19375000
-        Y: 21875000
-      - X: -19375000
-        Y: 20000000
-      - X: -20000000
-        Y: 20000000
-      - X: -20000000
-        Y: 18750000
-      - X: -21875000
-        Y: 18750000
-      - X: -21875000
-        Y: 10000000
-      - X: -20000000
-        Y: 10000000
-      - X: -20000000
-        Y: 6250000
-      - X: -15625000
-        Y: 1875000
-      - X: -11875000
-        Y: 625000
-      - X: -10000000
-        Y: 625000
-      - X: -10000000
-        Y: -1250000
-      - X: -10625000
-        Y: -1250000
-      - X: -12500000
-        Y: -3125000
-      - X: -12500000
-        Y: -5000000
-      - X: -10625000
-        Y: -6875000
-      - X: -10000000
-        Y: -6875000
-      - X: -10000000
-        Y: -7500000
-      - X: -8750000
-        Y: -8125000
-      - X: -1250000
-        Y: -8125000
-      - X: 0
-        Y: -7500000
-      - X: 0
-        Y: 625000
-      - X: 1875000
-        Y: 625000
-      - X: 5000000
-        Y: 1250000
-      - X: 10000000
-        Y: 6250000
-      - X: 10000000
-        Y: 10000000
-      - X: 11875000
-        Y: 10000000
-      - X: 11875000
-        Y: 18125000
-      - X: 10625000
-        Y: 18750000
-      - X: 10000000
-        Y: 18750000
-      - X: 10000000
-        Y: 20000000
+    - - X: -4779150
+        Y: -918924
+      - X: -7281058
+        Y: -1168646
+      - X: -9238253
+        Y: -4201307
+      - X: -8499191
+        Y: -6160855
+      - X: -1721655
+        Y: -6602552
+      - X: -761747
+        Y: -2434508
   m_CompositePaths:
     m_Paths:
-    - - {x: -0.1250059, y: -0.8125}
-      - {x: 0, y: -0.74998343}
-      - {x: 0.0000294, y: 0.0625}
-      - {x: 0.1875022, y: 0.0625005}
-      - {x: 0.5000055, y: 0.1250055}
-      - {x: 1, y: 0.6250108}
-      - {x: 1.0000294, y: 1}
-      - {x: 1.1875, y: 1.0000293}
-      - {x: 1.1874851, y: 1.8125076}
-      - {x: 1.0624942, y: 1.875}
-      - {x: 1, y: 1.8750294}
-      - {x: 0.99997073, y: 2}
-      - {x: 0.9375, y: 2.0000293}
-      - {x: 0.9374973, y: 2.1250057}
-      - {x: 0.7499874, y: 2.5000026}
-      - {x: 0.1249973, y: 2.625}
-      - {x: 0, y: 2.6250293}
-      - {x: -0.0000189, y: 2.6875062}
-      - {x: -0.3750042, y: 2.8125}
-      - {x: -0.8125076, y: 2.8124924}
-      - {x: -1.0000108, y: 2.625}
-      - {x: -1.1250018, y: 2.6249998}
-      - {x: -1.6250066, y: 2.5624921}
-      - {x: -1.9375, y: 2.187491}
-      - {x: -1.9375294, y: 2}
-      - {x: -2, y: 1.9999708}
-      - {x: -2.0000293, y: 1.875}
-      - {x: -2.1875, y: 1.8749708}
-      - {x: -2.187471, y: 1}
-      - {x: -2, y: 0.9999706}
-      - {x: -1.9999924, y: 0.62499243}
-      - {x: -1.5624944, y: 0.1874982}
-      - {x: -1.1874958, y: 0.0625}
-      - {x: -1, y: 0.0624706}
-      - {x: -1.0000294, y: -0.125}
-      - {x: -1.0625076, y: -0.1250076}
-      - {x: -1.25, y: -0.31251082}
-      - {x: -1.2499924, y: -0.5000076}
-      - {x: -1.0624893, y: -0.6875}
-      - {x: -1, y: -0.6875294}
-      - {x: -0.9999851, y: -0.7500076}
-      - {x: -0.8749941, y: -0.8125}
+    - - {x: -0.1721895, y: -0.6602536}
+      - {x: -0.076198004, y: -0.243442}
+      - {x: -0.477921, y: -0.091893}
+      - {x: -0.7281127, y: -0.1168753}
+      - {x: -0.9238206, y: -0.420143}
+      - {x: -0.8499016, y: -0.6160866}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!483693784 &1635679956
@@ -9307,7 +9199,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -575668777
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -9578,8 +9470,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!19719996 &1635679959
-TilemapCollider2D:
+--- !u!60 &1635679959
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9592,8 +9484,23 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.477915, y: -0.09189248}
+      - {x: -0.72810584, y: -0.11686465}
+      - {x: -0.92382526, y: -0.42013073}
+      - {x: -0.8499191, y: -0.6160855}
+      - {x: -0.17216551, y: -0.6602552}
+      - {x: -0.076174736, y: -0.24345082}
 --- !u!1 &1672502083
 GameObject:
   m_ObjectHideFlags: 0
@@ -9782,10 +9689,10 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1675992045
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.016731262, y: 0.29558527, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -10286,7 +10193,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 754221435
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -14616,7 +14523,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -575668777
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}

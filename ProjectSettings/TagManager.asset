@@ -50,15 +50,18 @@ TagManager:
   - name: Water
     uniqueID: 16516005
     locked: 0
-  - name: Grass
-    uniqueID: 754221435
-    locked: 0
   - name: Rocks
     uniqueID: 1675992045
     locked: 0
-  - name: Trees
+  - name: Grass
+    uniqueID: 754221435
+    locked: 0
+  - name: Log
     uniqueID: 3719298519
     locked: 0
   - name: Player
     uniqueID: 198645737
+    locked: 0
+  - name: TreeLeaves
+    uniqueID: 3723230501
     locked: 0
