@@ -21,7 +21,7 @@ public class BasicMovement : MonoBehaviour
 
         //Run(Hold Shift)
         if (Input.GetKey (KeyCode.LeftShift))
-            moveSpeed = 8f;
+            moveSpeed = 7f;
         else
             moveSpeed = 4f;
 
