@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Trashes
   - 
   - 
   - 
@@ -59,6 +59,9 @@ TagManager:
   - name: Bushes
     uniqueID: 2860535405
     locked: 0
+  - name: Trashes
+    uniqueID: 4092272915
+    locked: 0
   - name: Log
     uniqueID: 3719298519
     locked: 0
@@ -67,7 +70,4 @@ TagManager:
     locked: 0
   - name: TreeLeaves
     uniqueID: 3723230501
-    locked: 0
-  - name: Campfire
-    uniqueID: 4092272915
     locked: 0
