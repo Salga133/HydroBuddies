@@ -7,10 +7,10 @@ public class BasicMovement : MonoBehaviour
     public Animator animator;
     public Rigidbody2D myRigidbody;
 
-    private float moveSpeed;
+    private float speed;
+    public float walkSpeed;
+    public float runSpeed;
     private float dirX;
-
-
 
     Vector3 movement;
 
@@ -24,20 +24,22 @@ public class BasicMovement : MonoBehaviour
 
     private void Move()
     {
-        //Normal Walk
-        //transform.position = transform.position + movement * Time.deltaTime * moveSpeed;
-
-        myRigidbody.velocity = new Vector2(movement.x, movement.y) * moveSpeed;
 
         //Run(Hold Shift)
-        if (Input.GetKey (KeyCode.LeftShift))
-            moveSpeed = 6f;
-        else
-            moveSpeed = 4f;
+        // if (Input.GetKey (KeyCode.LeftShift)) 
+        //     speed = runSpeed;
+        // else
+        //     speed = walkSpeed;
 
-        dirX = Input.GetAxis ("Horizontal") * moveSpeed;
-        dirX = Input.GetAxis ("Vertical") * moveSpeed;
+        speed = Input.GetKey (KeyCode.LeftShift) ? runSpeed : walkSpeed;
+        
+        //transform.position = transform.position + movement * Time.deltaTime * speed;
+        myRigidbody.velocity = new Vector2(movement.x, movement.y) * speed;
+
+        dirX = Input.GetAxis ("Horizontal") * speed;
+        dirX = Input.GetAxis ("Vertical") * speed;
     }
+
 
     private void ProcessInputs()
     {
