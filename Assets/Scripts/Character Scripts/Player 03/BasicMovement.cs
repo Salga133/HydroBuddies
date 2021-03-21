@@ -19,7 +19,6 @@ public class BasicMovement : MonoBehaviour
         ProcessInputs();
         Animate();
         Move();
-
     }
 
     private void Move()
