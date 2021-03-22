@@ -51,6 +51,12 @@ TagManager:
   - name: Water
     uniqueID: 16516005
     locked: 0
+  - name: Water Drops
+    uniqueID: 3014281413
+    locked: 0
+  - name: Island
+    uniqueID: 785680785
+    locked: 0
   - name: GroundStuff
     uniqueID: 1675992045
     locked: 0
