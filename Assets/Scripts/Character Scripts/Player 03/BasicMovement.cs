@@ -7,12 +7,21 @@ public class BasicMovement : MonoBehaviour
     public Animator animator;
     public Rigidbody2D myRigidbody;
 
+    [SerializeField] private UI_Inventory uiInventory;
+
     private float speed;
     public float walkSpeed;
     public float runSpeed;
     private float dirX;
+    private Inventory inventory;
 
     Vector3 movement;
+
+
+   private void Awake(){
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
+    } 
 
     void Update()
     {
