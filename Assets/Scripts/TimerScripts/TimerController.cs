@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class TimerController : MonoBehaviour
 {
 
     public float timerInMinutes;
     public Text timerDisplay;
+    
+
+    
 
     IEnumerator TimerToStart() 
     {
+        
+
+        yield return new WaitForSeconds(5);
+
         float timer = timerInMinutes * 60;
         while(timer > 0) 
         {
@@ -35,6 +43,11 @@ public class TimerController : MonoBehaviour
 
         timerDisplay.gameObject.SetActive(false);
     }
+
+
+    
+
+    
 
     void Start()
     {
