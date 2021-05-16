@@ -21,10 +21,7 @@ public class BasicMovement : MonoBehaviour
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
-        ItemWorld.SpawnItemWorld(new Vector3(-10, -7), new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
-        ItemWorld.SpawnItemWorld(new Vector3(-10, -8), new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
-        ItemWorld.SpawnItemWorld(new Vector3(-10, -9), new Item { itemType = Item.ItemType.Sword, amount = 1 });
-        ItemWorld.SpawnItemWorld(new Vector3(-10, -10), new Item { itemType = Item.ItemType.Coin, amount = 1 });
+        // ItemWorld.SpawnItemWorld(new Vector3(-10, -7), new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
     }
 
     void Update()
@@ -38,6 +35,7 @@ public class BasicMovement : MonoBehaviour
     {
         ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
         if (itemWorld != null) {
+            Debug.Log(itemWorld.item.itemType);
             inventory.AddItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
         }

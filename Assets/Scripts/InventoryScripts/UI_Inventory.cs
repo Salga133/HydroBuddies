@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UI_Inventory : MonoBehaviour
 {
@@ -48,6 +49,12 @@ public class UI_Inventory : MonoBehaviour
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize + indentedPositionX, y * itemSlotCellSize * factoredY + indentedPositionY);
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
+            TextMeshProUGUI textmeshPro = itemSlotRectTransform.Find("Text").GetComponent<TextMeshProUGUI>();
+            if (item.amount > 1) {
+                textmeshPro.SetText("{0}", item.amount);
+            } else {
+                textmeshPro.SetText("");
+            }
             x++;
             if (x > 3) 
             {
