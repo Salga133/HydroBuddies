@@ -7,13 +7,13 @@ public class Inventory
 {
     public event EventHandler OnItemListChanged;
 
-    private List<Item> itemList = new List<Item>();
+    public List<Item> itemList = new List<Item>();
 
     public Inventory() 
     {
         itemList = new List<Item>();
 
-        AddItem(new Item { itemType = Item.ItemType.Sword, amount = 1 });
+        // AddItem(new Item { itemType = Item.ItemType.Sword, amount = 1 });
         // AddItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
         // AddItem(new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
 
@@ -23,6 +23,7 @@ public class Inventory
     public void AddItem(Item item) 
     {
         itemList.Add(item);
+        Debug.Log(itemList.Count);
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
