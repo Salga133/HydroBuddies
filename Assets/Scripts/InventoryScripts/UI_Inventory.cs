@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UI_Inventory : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class UI_Inventory : MonoBehaviour
     {
         this.inventory = inventory;
 
-        inventory.OnItemListChanged += Inventory_OnItemListChanged;
+        this.inventory.OnItemListChanged += Inventory_OnItemListChanged;
 
         RefreshInventoryItems();
     }
@@ -39,17 +40,26 @@ public class UI_Inventory : MonoBehaviour
         int x = 0;
         int y = 0;
         float itemSlotCellSize = 60f;
+        float indentedPositionX = 100f;
+        float indentedPositionY = 10f;
+        float factoredY = 0.7f;
         foreach (Item item in inventory.GetItemList()) {
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
-            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
+            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize + indentedPositionX, y * itemSlotCellSize * factoredY + indentedPositionY);
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
+            TextMeshProUGUI textmeshPro = itemSlotRectTransform.Find("Text").GetComponent<TextMeshProUGUI>();
+            if (item.amount > 1) {
+                textmeshPro.SetText("{0}", item.amount);
+            } else {
+                textmeshPro.SetText("");
+            }
             x++;
             if (x > 3) 
             {
                 x = 0;
-                y++;
+                y--;
             }
         }
     }
