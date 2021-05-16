@@ -11,14 +11,36 @@ public class BasicMovement : MonoBehaviour
     public float walkSpeed;
     public float runSpeed;
     private float dirX;
+    private Inventory inventory;
 
     Vector3 movement;
+
+    [SerializeField] private UI_Inventory uiInventory;
+
+    private void Awake() 
+    {
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
+        ItemWorld.SpawnItemWorld(new Vector3(-10, -7), new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
+        ItemWorld.SpawnItemWorld(new Vector3(-10, -8), new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
+        ItemWorld.SpawnItemWorld(new Vector3(-10, -9), new Item { itemType = Item.ItemType.Sword, amount = 1 });
+        ItemWorld.SpawnItemWorld(new Vector3(-10, -10), new Item { itemType = Item.ItemType.Coin, amount = 1 });
+    }
 
     void Update()
     {
         ProcessInputs();
         Animate();
         Move();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider) 
+    {
+        ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
+        if (itemWorld != null) {
+            inventory.AddItem(itemWorld.GetItem());
+            itemWorld.DestroySelf();
+        }
     }
 
     private void Move()
