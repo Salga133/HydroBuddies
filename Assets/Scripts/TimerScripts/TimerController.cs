@@ -24,17 +24,15 @@ public class TimerController : MonoBehaviour
         {
             int minutes = (int)(timer / 60);
             int seconds = (int)timer % 60;
-            int miliseconds = (int)((timer - (int)(timer))*100); 
             string minutesText = minutes.ToString("00");
             string secondsText = seconds.ToString("00");
-            string milisecondsText = miliseconds.ToString("00");
-            string display = string.Format("Time: {0}:{1}.{2}", minutesText, secondsText, milisecondsText);
+            string display = string.Format("Time: {0}:{1}", minutesText, secondsText);
 
             timerDisplay.text = display;
 
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(1f);
 
-            timer -= 0.01f;
+            timer -= 1f;
         }
 
         timerDisplay.text = "STOP!";

@@ -21,7 +21,6 @@ public class BasicMovement : MonoBehaviour
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
-        // ItemWorld.SpawnItemWorld(new Vector3(-10, -7), new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
     }
 
     void Update()
@@ -35,7 +34,6 @@ public class BasicMovement : MonoBehaviour
     {
         ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
         if (itemWorld != null) {
-            Debug.Log(itemWorld.item.itemType);
             inventory.AddItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
         }
