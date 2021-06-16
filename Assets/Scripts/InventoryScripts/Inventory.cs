@@ -6,7 +6,6 @@ using UnityEngine;
 public class Inventory
 {
     public event EventHandler OnItemListChanged;
-
     public List<Item> itemList = new List<Item>();
 
     public Inventory() 
@@ -58,7 +57,14 @@ public class Inventory
     }
 
     public void UseItem(Item item) {
-        
+        BasicMovement playerMovement = GameObject.Find("Player 03").GetComponent<BasicMovement>();
+
+        if (item.itemType == Item.ItemType.Item2) {
+            playerMovement.AddHealth(10);
+            
+        }
+
+        Debug.Log(playerMovement.health);
     }
 
     public List<Item> GetItemList() 

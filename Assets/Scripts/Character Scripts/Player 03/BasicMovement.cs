@@ -12,6 +12,7 @@ public class BasicMovement : MonoBehaviour
     public float runSpeed;
     private float dirX;
     private Inventory inventory;
+    public int health = 0;
 
     Vector3 movement;
 
@@ -71,6 +72,10 @@ public class BasicMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Magnitude", movement.magnitude);
+    }
+
+    public void AddHealth(int amount) {
+        health += amount;
     }
 }
 
