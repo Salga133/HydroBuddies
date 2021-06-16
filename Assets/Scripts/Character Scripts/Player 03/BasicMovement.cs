@@ -37,6 +37,9 @@ public class BasicMovement : MonoBehaviour
         ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
         if (itemWorld != null) {
             Debug.Log(itemWorld.item.itemType);
+            if (inventory.itemList.Count >= 8) {
+                return;
+            } 
             inventory.AddItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
         }
@@ -46,14 +49,14 @@ public class BasicMovement : MonoBehaviour
     {
 
         //Run(Hold Shift)
-        // if (Input.GetKey (KeyCode.LeftShift)) 
-        //     speed = runSpeed;
-        // else
-        //     speed = walkSpeed;
+        if (Input.GetKey (KeyCode.LeftShift)) 
+            speed = runSpeed;
+        else
+            speed = walkSpeed;
 
-        speed = Input.GetKey (KeyCode.LeftShift) ? runSpeed : walkSpeed;
+        // speed = Input.GetKey (KeyCode.LeftShift) ? runSpeed : walkSpeed;
         
-        //transform.position = transform.position + movement * Time.deltaTime * speed;
+        // transform.position = transform.position + movement * Time.deltaTime * speed;
         myRigidbody.velocity = new Vector2(movement.x, movement.y) * speed;
 
         dirX = Input.GetAxis ("Horizontal") * speed;
@@ -63,7 +66,7 @@ public class BasicMovement : MonoBehaviour
 
     private void ProcessInputs()
     {
-        movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+        movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
         
 
