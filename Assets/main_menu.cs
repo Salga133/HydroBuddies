@@ -12,7 +12,7 @@ public class main_menu : MonoBehaviour
 
     public void ExitGame()
     {
-        Debug.Log("Quit!, can't really quit on editor, so here's a message instead lol");
+        //Debug.Log("Quit!, can't really quit on editor, so here's a message instead lol");
         //Note: Does not work on editor, made it print 'Quit!' to indicate it quits lol.
         Application.Quit();
     }
