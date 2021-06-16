@@ -29,9 +29,14 @@ public class GarbageCountController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject inventoryUI = GameObject.Find("InventoryUI");
-        UI_Inventory uiInventory = inventoryUI.GetComponent<UI_Inventory>();
-        garbageCount = uiInventory.inventoryLength();
-        garbageCountDisplay.text = string.Format("Garbage: {0}/{1}", garbageCount, totalGarbage);
+        if (garbageCount == totalGarbage) {
+            garbageCountDisplay.text = "You've Finished The Game";
+        } else {
+            GameObject inventoryUI = GameObject.Find("InventoryUI");
+            UI_Inventory uiInventory = inventoryUI.GetComponent<UI_Inventory>();
+            garbageCount = uiInventory.inventoryLength();
+            garbageCountDisplay.text = string.Format("Garbage: {0}/{1}", garbageCount, totalGarbage);
+        }
+
     }
 }

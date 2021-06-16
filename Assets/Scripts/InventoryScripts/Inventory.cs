@@ -39,6 +39,11 @@ public class Inventory
 
     public void RemoveItem(Item item) 
     {
+        Vector2 garbageBinPos = GameObject.Find("GarbageBin").GetComponent<RectTransform>().anchoredPosition;
+        Vector2 playerPos = GameObject.Find("Player 03").transform.position;
+        float distance = Vector2.Distance(playerPos, garbageBinPos);
+        Debug.Log(distance);
+        if (distance > 3) return;
         if (item.IsStackable()) {
             Item itemInInventory = null;
             foreach (Item inventoryItem in itemList) {
@@ -64,7 +69,6 @@ public class Inventory
             
         }
 
-        Debug.Log(playerMovement.health);
     }
 
     public List<Item> GetItemList() 
