@@ -10,6 +10,11 @@ public class UI_Inventory : MonoBehaviour
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
 
+    public int inventoryLength() 
+    {
+        return inventory.itemList.Count;
+    }
+
     private void Awake() 
     {
         itemSlotContainer = transform.Find("ItemSlotContainer");
@@ -46,6 +51,11 @@ public class UI_Inventory : MonoBehaviour
         foreach (Item item in inventory.GetItemList()) {
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
+
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () => {
+                inventory.RemoveItem(item);
+            };
+
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize + indentedPositionX, y * itemSlotCellSize * factoredY + indentedPositionY);
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
