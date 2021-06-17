@@ -10,7 +10,7 @@ public class BasicMovement : MonoBehaviour
     private float speed;
     public float walkSpeed;
     public float runSpeed;
-    private float dirX;
+    private float direction;
     private Inventory inventory;
     public int health = 0;
 
@@ -59,8 +59,8 @@ public class BasicMovement : MonoBehaviour
         // transform.position = transform.position + movement * Time.deltaTime * speed;
         myRigidbody.velocity = new Vector2(movement.x, movement.y) * speed;
 
-        dirX = Input.GetAxis ("Horizontal") * speed;
-        dirX = Input.GetAxis ("Vertical") * speed;
+        direction = Input.GetAxis ("Horizontal") * speed;
+        direction = Input.GetAxis ("Vertical") * speed;
     }
 
 
