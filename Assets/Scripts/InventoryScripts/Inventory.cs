@@ -71,7 +71,7 @@ public class Inventory
 
         if (item.itemType == Item.ItemType.Item2) {
             playerMovement.AddHealth(10);
-            
+
         }
 
     }
