@@ -18,6 +18,7 @@ public class HealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        int playerHealth = GameObject.Find("Player 03").GetComponent<BasicMovement>().health;
+        healthCountText.text = "Health: " + playerHealth.ToString();
     }
 }
